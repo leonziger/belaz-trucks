@@ -90,6 +90,10 @@
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
+
+      @media(max-width: 375px) {
+        padding: 13px;
+      }
     }
   }
 

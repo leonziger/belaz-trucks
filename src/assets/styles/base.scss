@@ -13,13 +13,11 @@
 }
 
 ::placeholder {
-  font-size: 16px;
-  color: #23292e;
-  letter-spacing: 0.32px;
-
-  @media(max-width: 375px){
-    font-size: 14px;
-  }
+  color: #818181;
+  font-family: 'Proxima Nova Rg', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 * {
@@ -99,4 +97,19 @@ button {
 
 .fat {
   font-weight: 700;
+}
+
+.title-30 {
+  color: #000;
+  font-family: "Proxima Nova - Black", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 57px;
+
+  @media(max-width: 480px) {
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
 }
