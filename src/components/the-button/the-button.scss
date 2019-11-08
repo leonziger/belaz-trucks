@@ -1,0 +1,25 @@
+.the-button {
+  color: #ffffff;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: $delay;
+  background-color: #1669b3;
+
+  &:hover {
+    background: #f7b516;
+  }
+
+  &__icon{
+    margin-right: 13px;
+  }
+}

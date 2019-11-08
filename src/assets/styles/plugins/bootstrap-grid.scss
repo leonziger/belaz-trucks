@@ -1,0 +1,8 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap-grid';
+
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
