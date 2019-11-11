@@ -1,0 +1,140 @@
+.parts-search {
+  background-image: url(../images/parts-search_bg.jpg);
+  height: 580px;
+  padding: 94px 0;
+
+  @media(max-width: 991px) {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/parts-search_bg.jpg);
+    height: auto;
+    padding: 70px 0;
+  }
+
+  @media(max-width: 576px) {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  &__headline {
+    color: #fff;
+    margin-bottom: 23px;
+
+    @media(max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+  
+  &__description {
+    text-align: center;
+    max-width: 620px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 54px;
+
+    @media(max-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+
+    @media(max-width: 767px) {
+      margin: 0 auto;
+      max-width: 370px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-submit {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 100%;
+      height: 70px;
+      background-color: #f7b516;
+      transition: 0.3s;
+
+      @media(max-width: 767px) {
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 480px) {
+        height: 50px;
+      }
+
+      &:hover {
+        background-color: #1866af;
+      }
+    }
+  }
+
+  &__field {
+    height: 70px;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 0 55px 0 33px;
+
+    @media(max-width: 480px) {
+      height: 50px;
+    }
+
+    &-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    &-phone {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/get-price_phone.png);
+      position: absolute;
+      top: 48%;
+      transform: translateY(-50%);
+      right: 44px;
+
+      @media(max-width: 991px) {
+        right: 30px;
+      }
+    }
+  }
+  
+  &__content {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: -2px;
+
+    @media(max-width: 767px) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    &-phone {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Proxima Nova - Extrabld", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      margin-top: 10px;
+
+
+      @media(max-width: 767px) {
+        margin-top: 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
