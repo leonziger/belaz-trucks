@@ -7,7 +7,6 @@ if ( screenWidth <= 991) {
         const mainHeaderPosition = getComputedStyle(mainHeader).position;
         const link = $(this).attr('href');
         let coordinates = $(link).offset().top;
-        // console.log(coordinates);
 
         if ( mainHeaderPosition === 'fixed') {
             coordinates = $(link).offset().top-$('.main-header').height();
