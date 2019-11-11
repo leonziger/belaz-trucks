@@ -4,5 +4,10 @@
 .container {
   @media (min-width: 1200px) {
     max-width: 1200px;
+    //outline: 1px solid red;
+  }
+
+  .row {
+    //outline: 1px solid green;
   }
 }

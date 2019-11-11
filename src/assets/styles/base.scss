@@ -113,3 +113,18 @@ button {
     margin-bottom: 30px;
   }
 }
+
+.title-36 {
+  font-family: "Proxima Nova - Black", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+
+  @media(max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media(max-width: 480px) {
+    font-size: 24px;
+  }
+
+}
