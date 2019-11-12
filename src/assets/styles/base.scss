@@ -95,6 +95,10 @@ button {
   transition: $delay;
 }
 
+.main-wrapoper {
+  overflow-x: hidden;
+}
+
 .fat {
   font-weight: 700;
 }
