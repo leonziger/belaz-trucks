@@ -2,13 +2,14 @@ import $ from 'jquery';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'jquery-validation/dist/jquery.validate';
 import 'jquery-validation/dist/localization/messages_ru';
+import {openThanksModal} from "../thanks/thanks";
 
 const gpForm = $('.get-price__form');
 const phone = $('[name="phone"]');
 const fieldErrorClassName = 'get-price__field-error';
 const fieldValidClassName = 'get-price__field-valid';
 
-phone.mask('+380 (99) 999-99-99', { autoclear: false });
+phone.mask('+7 (999) 999-99-99', { autoclear: false });
 
 $.validator.addMethod('condition', function(value, element, condition) {
     if (typeof condition !== 'function') {
@@ -35,7 +36,7 @@ gpForm.validate({
     messages: {
         'phone': {
             required: 'Обязательное поле для заполнения',
-            condition: 'Пожалуйста, введите 9 цифр номера Вашого телефона'
+            condition: 'Пожалуйста, введите 10 цифр номера Вашого телефона'
         },
         'email': {
             required: 'Обязательное поле для заполнения',
@@ -57,11 +58,7 @@ gpForm.validate({
     },
 
     submitHandler: function(form) {
-        // openThanksModal();
         gpForm.trigger('reset');
-        gpForm.find('select option').prop('selected', function () {
-            return $(this).prop('defaultSelected');
-        }).trigger('change');
-
+        openThanksModal();
     }
 });

@@ -2,13 +2,14 @@ import $ from 'jquery';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'jquery-validation/dist/jquery.validate';
 import 'jquery-validation/dist/localization/messages_ru';
+import {openThanksModal} from "../thanks/thanks";
 
 const psForm = $('.parts-search__form');
 const phone = $('[name="phone"]');
 const fieldErrorClassName = 'parts-search__field-error';
 const fieldValidClassName = 'parts-search__field-valid';
 
-phone.mask('+380 (99) 999-99-99', { autoclear: false });
+phone.mask('+7 (999) 999-99-99', { autoclear: false });
 
 $.validator.addMethod('condition', function(value, element, condition) {
     if (typeof condition !== 'function') {
@@ -38,7 +39,7 @@ psForm.validate({
     messages: {
         'phone': {
             required: 'Обязательное поле для заполнения',
-            condition: 'Пожалуйста, введить 9 цифр номера Вашого телефона'
+            condition: 'Пожалуйста, введить 10 цифр номера Вашого телефона'
         },
         'artikul': {
             required: 'Обязательное поле для заполнения',
@@ -61,11 +62,7 @@ psForm.validate({
     },
 
     submitHandler: function(form) {
-        // openThanksModal();
         psForm.trigger('reset');
-        psForm.find('select option').prop('selected', function () {
-            return $(this).prop('defaultSelected');
-        }).trigger('change');
-
+        openThanksModal();
     }
 });

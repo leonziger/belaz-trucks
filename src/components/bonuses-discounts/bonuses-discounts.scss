@@ -1,0 +1,40 @@
+.bonuses-discounts {
+  background-color: #08243e;
+  padding: 90px 0 25px;
+  color: #fff;
+
+  @media(max-width: 768px) {
+    padding: 50px 0 40px;
+  }
+
+  &__headline {
+    max-width: 700px;
+    margin: 0 auto 92px;
+
+    @media(max-width: 991px) {
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__item {
+
+    &-icon {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 36px;
+
+      img {
+        width: auto;
+      }
+
+      @media(max-width: 768px) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}

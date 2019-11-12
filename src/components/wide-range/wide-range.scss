@@ -15,7 +15,8 @@
   }
 
   &__headline {
-    margin-bottom: 22px;
+    margin: 0 auto 22px;
+    text-align: center;
 
     @media(max-width: 768px) {
       margin-bottom: 10px;

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import vex from 'vex-js';
-import callback from '../callback/callback';
+import {openThanksModal} from "../thanks/thanks";
 
 
 $('.main-header__contacts-button').click(function (e) {
@@ -19,7 +19,7 @@ $('.main-header__contacts-button').click(function (e) {
             const phone = $('[name="phone"]');
             const fieldErrorClassName = 'callback__phone-error';
             const fieldValidClassName = 'callback__phone-valid';
-            phone.mask('+380 (99) 999-99-99', { autoclear: false });
+            phone.mask('+7 (999) 999-99-99', { autoclear: false });
 
             $.validator.addMethod('condition', function(value, element, condition) {
                 if (typeof condition !== 'function') {
@@ -39,7 +39,7 @@ $('.main-header__contacts-button').click(function (e) {
                 messages: {
                     'phone': {
                         required: 'Обязательное поле для заполнения',
-                        condition: 'Пожалуйста, введите 9 цифр номера Вашого телефона'
+                        condition: 'Пожалуйста, введите 10 цифр номера Вашого телефона'
                     }
                 },
 
@@ -57,10 +57,9 @@ $('.main-header__contacts-button').click(function (e) {
                 },
 
                 submitHandler: function(form) {
-                    // openThanksModal();
                     cbForm.trigger('reset');
                     $('.modal__close').trigger('click');
-
+                    openThanksModal();
                 }
             });
         }
