@@ -1,0 +1,74 @@
+.safe-transportation {
+  padding: 92px 0 50px;
+
+  @media(max-width: 991px) {
+    padding: 70px 0 50px;
+  }
+
+  @media(max-width: 576px) {
+    padding: 50px 0;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__headline {
+    color: #000;
+    max-width: 680px;
+    text-align: center;
+    margin: 0 auto 95px;
+
+    @media(max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__advantage {
+    padding: 0 30px;
+    margin-bottom: 50px;
+
+    &-icon {
+      margin-bottom: 35px;
+
+      @media(max-width: 767px) {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 375px) {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-description {
+      font-size: 18px;
+      margin-bottom: 32px;
+
+      @media(max-width: 767px) {
+        margin-bottom: 10px;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+
+    &-link {
+      color: #000;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-transform: uppercase;
+      
+      &:hover {
+        color: #1669b3;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
