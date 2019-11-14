@@ -1,0 +1,40 @@
+.mobile-help {
+  padding: 90px 0 40px;
+
+  @media(max-width: 991px) {
+    padding: 70px 0 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 50px 0 30px;
+  }
+
+  &__headline {
+    max-width: 860px;
+  }
+
+  &__advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-icon {
+      width: 170px;
+      height: 170px;
+      border: 5px solid #ffbc3b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media(max-width: 767px) {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    &-description {
+      padding: 0 10px;
+    }
+  }
+}
