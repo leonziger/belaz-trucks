@@ -1,0 +1,19 @@
+.own-storage {
+  padding: 90px 0 24px;
+
+  @media (max-width: 768px) {
+    padding: 50px 0 30px;
+  }
+
+  &__description {
+    max-width: 680px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &-icon {
+      height: auto;
+    }
+  }
+}

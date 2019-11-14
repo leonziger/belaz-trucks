@@ -2,7 +2,12 @@
   background-image: url(../images/main-banner__bg.jpg);
   height: 860px;
 
+  @media(max-width: 1366px) {
+    background-position: -300px 0;
+  }
+
   @media(max-width: 991px) {
+    background-position: 0 0;
     height: auto;
     padding-top: 80px;
   }

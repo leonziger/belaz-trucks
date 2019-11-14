@@ -18,7 +18,7 @@ $.validator.addMethod('condition', function(value, element, condition) {
     return this.optional(element) || condition(value);
 });
 
-gpForm.validate({
+const gpValidator = gpForm.validate({
     rules: {
         'phone': {
             required: true,
@@ -61,4 +61,9 @@ gpForm.validate({
         gpForm.trigger('reset');
         openThanksModal();
     }
+});
+
+gpForm.click( function() {
+    console.log('click');
+    gpValidator.form();
 });

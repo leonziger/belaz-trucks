@@ -15,6 +15,7 @@ $('.main-header__contacts-button').click(function (e) {
         unsafeContent: modal.html(),
         closeClassName: 'modal__close',
         afterOpen: function () {
+
             const cbForm = $('.callback__form');
             const phone = $('[name="phone"]');
             const fieldErrorClassName = 'callback__phone-error';
@@ -27,8 +28,7 @@ $('.main-header__contacts-button').click(function (e) {
                 }
                 return this.optional(element) || condition(value);
             });
-
-            cbForm.validate({
+            const cbValidator = cbForm.validate({
                 rules: {
                     'phone': {
                         required: true,
@@ -61,6 +61,10 @@ $('.main-header__contacts-button').click(function (e) {
                     $('.modal__close').trigger('click');
                     openThanksModal();
                 }
+            });
+
+            cbForm.click( function() {
+                cbValidator.form();
             });
         }
     });

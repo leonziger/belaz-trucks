@@ -18,7 +18,7 @@ $.validator.addMethod('condition', function(value, element, condition) {
     return this.optional(element) || condition(value);
 });
 
-psForm.validate({
+const psValidator = psForm.validate({
     rules: {
         'phone': {
             required: true,
@@ -65,4 +65,8 @@ psForm.validate({
         psForm.trigger('reset');
         openThanksModal();
     }
+});
+
+psForm.click( function() {
+    psValidator.form();
 });
