@@ -111,9 +111,13 @@
       height: 18px;
       background-image: url(../images/get-price_email.png);
       position: absolute;
-      top: 35px;
-      transform: translateY(-50%);
+      top: 25px;
       right: 28px;
+
+      @media(max-width: 480px) {
+        top: 15px;
+      }
+
     }
 
     &-phone {
@@ -121,9 +125,12 @@
       height: 20px;
       background-image: url(../images/get-price_phone.png);
       position: absolute;
-      top: 35px;
-      transform: translateY(-50%);
+      top: 25px;
       right: 30px;
+
+      @media(max-width: 480px) {
+        top: 15px;
+      }
     }
   }
 
