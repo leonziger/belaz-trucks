@@ -53,6 +53,5 @@ const fcValidator = fcForm.validate({
 });
 
 fcForm.click( function() {
-    console.log('click');
     fcValidator.form();
 });

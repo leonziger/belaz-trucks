@@ -64,6 +64,5 @@ const gpValidator = gpForm.validate({
 });
 
 gpForm.click( function() {
-    console.log('click');
     gpValidator.form();
 });

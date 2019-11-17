@@ -1,0 +1,55 @@
+.contacts {
+  color: #000;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__headline {
+    margin-bottom: 101px;
+
+    @media(max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__address {
+    height: 400px;
+    background-image: url(../images/contacts.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @media(max-width: 991px) {
+      background-color: #fff;
+      height: auto;
+      background-image: none;
+      padding: 50px 0;
+    }
+
+  }
+
+  &__office {
+    &-address {
+      font-family: "Proxima Nova Rg", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+
+    &-phone {
+      font-family: "Proxima Nova - Extrabld", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}
